@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 
-namespace U2BA1 
+namespace U2BA3 
 {
   class Simple 
   {
@@ -25,6 +25,7 @@ namespace U2BA1
       {
           return Add2(a, (b, c));
       }
+    
       static int Quadratic(int x, int a, int b, int c)
       {
           int q1 = Mul3(x, x, a);
@@ -40,6 +41,5 @@ namespace U2BA1
           int y3 = Quadratic(3, 4, 3, 2);
           y1=y1+y2+y3;
       }
-      
   }
 }
