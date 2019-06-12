@@ -24,7 +24,7 @@ namespace U2BA8
             var hash = Draw("*");
 			Func<string, string> fig = Boom(3, Then(star,Then(hash, star)));
 			string res = fig("");
-			res = res + "!";
+			res = res + "!!";
 		}
 	}
 }
