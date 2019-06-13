@@ -68,7 +68,7 @@ new Tuple<PlayingCard, int[]>
       
 var
  d = 
-new Deck("Deck 1", deck, PlayingCards)
+new Deck("Deck 1", deck)
 ;
 31
 32
@@ -114,7 +114,9 @@ int
       {
 53
         count = count + this.
+PlayingCards[i]
 .
+Item2
 ;
 54
       }
@@ -141,7 +143,7 @@ this
 .
 PlayingCards[i]
 .
-Item1
+Item1.name
  + " x " + 
 this
 .
@@ -156,13 +158,13 @@ PlayingCards.Item2
 67
 68
     public 
-int
+PlayingCard[]
  MakeFullDeck()
 69
     {
 70
       int size = 
-8
+this.CountPlayingCards()
 ;
 71
       int index = 0;
@@ -178,15 +180,17 @@ Length
       {
 75
         for (int j = 0; j < this.PlayingCards[i].
-Length
+Item2
 ; j++)
 76
         {
 77
           fullDeck[index] = this.PlayingCards[i].
+Item1
 ;
 78
           
+index++
 ;
 79
         }
